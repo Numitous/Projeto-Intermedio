@@ -20,11 +20,6 @@ div.links a {
     display: inline-block;
 }
 
-div.links p{
-    width: 32%;
-    display: inline-block;
-}
-
 div.Games {
     align-self: center;
 }
