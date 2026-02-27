@@ -20,6 +20,11 @@ div.links a {
     display: inline-block;
 }
 
+div.links button{
+    width: 35%;
+    display: inline-block;
+}
+
 div.Games {
     align-self: center;
 }
