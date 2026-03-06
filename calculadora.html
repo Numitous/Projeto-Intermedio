@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+ <head>
+     <title>Calculadora</title>
+     <link href="assets/style.css" rel="stylesheet" />
+ </head>
+
+    <div class="numeros">
+       <input type="text" name="val01">
+       <br />
+       <input type="text" name="val02">
+       <br />
+    </div>     
+    <div class="botton">
+        <button onclick="soma()">+</button>
+        <button onclick="subt()">-</button>
+        <button onclick="mult()">*</button>
+        <button onclick="divi()">/</button>    
+    </div> 
+    
+    <script>
+        function soma() 
+        {
+         let vals = getVals()
+         let res = document.getElementsByName('res') [0]
+         res.value = Number(vals.val01) + Number(vals.val02)
+        }
+
+        function subt() 
+        {
+         let vals = getVals()
+         let res = document.getElementsByName('res') [0]
+         res.value = Number(vals.val01) - Number(vals.val02)
+        } 
+
+         function mult() 
+        {
+         let vals = getVals()
+         let res = document.getElementsByName('res') [0]
+         res.value = Number(vals.val01) * Number(vals.val02)
+        } 
+
+         function divi() 
+        {
+         let vals = getVals()
+         let res = document.getElementsByName('res') [0]
+         res.value = Number(vals.val01) / Number(vals.val02)
+        } 
+
+        function getVals() 
+        { 
+          return{
+            val01: document.getElementsByName('val01')[0].value,
+            val02: document.getElementsByName('val02')[0].value,
+          }
+
+        }
+    </script>
+
+
+
+
+    <br />
+    <div class="resultado">
+       <input type="text" name="res" readonly><br />
+    </div>     
+
+
+
+<a href="../index.html"> 
+                <button>
+                      Voltar para a pagina principal
+                </button>
+             </a>
+
+
+
+</html>
+
+
+
+
