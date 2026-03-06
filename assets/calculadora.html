@@ -20,29 +20,33 @@
     <script>
         function soma() 
         {
+        document.getElementsByName('op').innerHTML = '0'
          let vals = getVals()
-         let res = document.getElementsByName('res') [0]
+         let res = document.getElementsByName('res')[0]
          res.value = Number(vals.val01) + Number(vals.val02)
         }
 
         function subt() 
         {
+        document.getElementsByName('op').innerHTML = '0'
          let vals = getVals()
-         let res = document.getElementsByName('res') [0]
+         let res = document.getElementsByName('res')[0]
          res.value = Number(vals.val01) - Number(vals.val02)
         } 
 
          function mult() 
         {
+        document.getElementsByName('op').innerHTML = '0'
          let vals = getVals()
-         let res = document.getElementsByName('res') [0]
+         let res = document.getElementsByName('res')[0]
          res.value = Number(vals.val01) * Number(vals.val02)
         } 
 
          function divi() 
         {
+         document.getElementsByName('op').innerHTML = '0'
          let vals = getVals()
-         let res = document.getElementsByName('res') [0]
+         let res = document.getElementsByName('res')[0]
          res.value = Number(vals.val01) / Number(vals.val02)
         } 
 
