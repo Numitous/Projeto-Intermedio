@@ -3,20 +3,21 @@
     <head>
         <title>Jogo</title>
     </head>
- <body>
+  <body>
 
         <h2>Jogo da sorte</h2>
-    <input type="text" />
-    <botton>OK</botton>
-    <id="resposta></p>
-    
+    <input  type="number" id="numero" placeholder="número entre 0-100"> />
+    <button onclick="verificar()">OK</button>
+     
+    <p id="resposta"></p>
+
     <script>
 
         let n_sorte = Math.round(Math.random()*100)
         let resposta = documento.getelementById('resposta')
 
         function verificar() {
-    let tentativa = document.getElementById("resposta").value;
+        let tentativa = document.getElementById("numero").value;
 
     if (tentativa == n_sorte) {
         resposta.innerHTML = "Parabéns! Acertaste no número!";
@@ -30,12 +31,12 @@
 }
     </script>
 
-
+ <br>
  <a href="../index.html"> 
-                <button>
-                      Voltar para a pagina principal
-                </button>
+    <button>
+      Voltar para a pagina principal
+    </button>
  </a>
 
- </body>
+  </body>
 </html>
