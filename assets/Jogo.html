@@ -8,12 +8,34 @@
         <h2>Jogo da sorte</h2>
     <input type="text" />
     <botton>OK</botton>
-    <p>id="resposta</p>
+    <id="resposta></p>
     
-    <script>´
+    <script>
+
         let n_sorte = Math.round(Math.random()*100)
         let resposta = documento.getelementById('resposta')
+
+        function verificar() {
+    let tentativa = document.getElementById("resposta").value;
+
+    if (tentativa == n_sorte) {
+        resposta.innerHTML = "Parabéns! Acertaste no número!";
+    } 
+    else if (tentativa > n_sorte) {
+        resposta.innerHTML = "⬇️ O número da sorte é menor.";
+    } 
+    else {
+        resposta.innerHTML = "⬆️ O número da sorte é maior.";
+    }
+}
     </script>
+
+
+ <a href="../index.html"> 
+                <button>
+                      Voltar para a pagina principal
+                </button>
+ </a>
 
  </body>
 </html>
