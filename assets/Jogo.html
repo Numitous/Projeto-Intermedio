@@ -8,26 +8,38 @@
         <h2>Jogo da sorte</h2>
     <input  type="number" id="numero" placeholder="número entre 0-100"> />
     <button onclick="verificar()">OK</button>
-     
-    <p id="resposta"></p>
+
+    <div>
+       <img src="bigger.png" id="bigger" />
+       <img src="equal.png" id="equal" />
+       <img src="smaller.png" id="bigger" />
+    </div>
 
     <script>
 
         let n_sorte = Math.round(Math.random()*100)
-        let resposta = documento.getelementById('resposta')
-
-        function verificar() {
-        let tentativa = document.getElementById("numero").value;
+        let resposta = document.getElementById('resposta')
+        adivinha.value=''
+        let bigger =document.getElementById('bigger')
+        let equal =document.getElementById('equal')
+        let smaller =document.getElementById('smaller')
+    function verificar() {
+    let tentativa = document.getElementById("numero").value;
 
     if (tentativa == n_sorte) {
-        resposta.innerHTML = "Parabéns! Acertaste no número!";
+        bigger.style.display="none" = "Parabéns! Acertaste no número!";
+        equal.style.display="none" = "Parabéns! Acertaste no número!";
+        smaller.style.display="block" = "Parabéns! Acertaste no número!";
     } 
     else if (tentativa > n_sorte) {
-        resposta.innerHTML = "⬇️ O número da sorte é menor.";
+        bigger.style.display='block' = "👇 O número da sorte é menor.";
+        equal.style.display='none' = "👇 O número da sorte é menor.";
+        smaller.style.display='none' = "👇 O número da sorte é menor.";
     } 
     else {
-        resposta.innerHTML = "⬆️ O número da sorte é maior.";
-    }
+        bigger.style.display='none' = "☝️ O número da sorte é maior.";
+        equal.style.display='block' = "☝️ O número da sorte é maior.";
+        smaller.style.display='none' = "☝️ O número da sorte é maior.";
 }
     </script>
 
