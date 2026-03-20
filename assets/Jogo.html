@@ -7,7 +7,7 @@
 
         <h2>Jogo da sorte</h2>
     <input  type="number" id="numero" placeholder="número entre 0-100"> />
-    <button onclick="verificar()">OK</button>
+    <button onclick="validar()">OK</button>
 
     <div>
        <img src="bigger.png" id="bigger" />
@@ -23,25 +23,28 @@
         let bigger =document.getElementById('bigger')
         let equal =document.getElementById('equal')
         let smaller =document.getElementById('smaller')
-    function verificar() {
+        let audio = new Audio ('')
+    function validar() {
     let tentativa = document.getElementById("numero").value;
 
     if (tentativa == n_sorte) {
-        bigger.style.display="none" = "Parabéns! Acertaste no número!";
-        equal.style.display="none" = "Parabéns! Acertaste no número!";
-        smaller.style.display="block" = "Parabéns! Acertaste no número!";
-    } 
-    else if (tentativa > n_sorte) {
-        bigger.style.display='block' = "👇 O número da sorte é menor.";
-        equal.style.display='none' = "👇 O número da sorte é menor.";
-        smaller.style.display='none' = "👇 O número da sorte é menor.";
-    } 
-    else {
-        bigger.style.display='none' = "☝️ O número da sorte é maior.";
-        equal.style.display='block' = "☝️ O número da sorte é maior.";
-        smaller.style.display='none' = "☝️ O número da sorte é maior.";
-}
-    </script>
+        bigger.style.display="none" 
+        equal.style.display="none" 
+        smaller.style.display="block"
+        audio.pause()
+      } else if (tentativa > n_sorte) {
+        bigger.style.display='block' 
+        equal.style.display='none' 
+        smaller.style.display='none'
+        audio.pause()
+     } else {
+        bigger.style.display='none' 
+        equal.style.display='block' 
+        smaller.style.display='none'
+        audio.play
+    }
+        
+   </script>
 
  <br>
  <a href="../index.html"> 
