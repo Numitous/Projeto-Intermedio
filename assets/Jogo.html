@@ -6,52 +6,63 @@
   <body>
 
         <h2>Jogo da sorte</h2>
-    <input  type="number" id="numero" placeholder="número entre 0-100"> />
+    <input  type="number" name="adivinha" id="adivinha" min="0" max="100" onchange="validar()" placeholder="0-100" />
     <button onclick="validar()">OK</button>
+    <button onclick="window.location.reload()">Reset</button>
+
 
     <div>
        <img src="bigger.png" id="bigger" />
        <img src="equal.png" id="equal" />
-       <img src="smaller.png" id="bigger" />
+       <img src="smaller.png" id="smaller" />
     </div>
 
     <script>
 
-        let n_sorte = Math.round(Math.random()*100)
+        let n_sorte = Math.round(Math.random() * 100)
         let resposta = document.getElementById('resposta')
         adivinha.value=''
-        let bigger =document.getElementById('bigger')
-        let equal =document.getElementById('equal')
-        let smaller =document.getElementById('smaller')
-        let audio = new Audio ('')
+        let bigger = document.getElementById('bigger')
+        let equal = document.getElementById('equal')
+        let smaller = document.getElementById('smaller')
+        let audio = new Audio ('cyberpunk-2077-never-fade-away-by-samurai-refused.mp3')
+        audio.loop = true
     function validar() {
-    let tentativa = document.getElementById("numero").value;
+    let tentativa = document.getElementById("adivinha").value;
 
     if (tentativa == n_sorte) {
-        bigger.style.display="none" 
-        equal.style.display="none" 
-        smaller.style.display="block"
-        audio.pause()
-      } else if (tentativa > n_sorte) {
-        bigger.style.display='block' 
-        equal.style.display='none' 
-        smaller.style.display='none'
-        audio.pause()
-     } else {
         bigger.style.display='none' 
+        equal.style.display='none'
+        smaller.style.display='block'
+        audio.pause('cyberpunk-2077-never-fade-away-by-samurai-refused.mp3')
+
+      } else if (tentativa > n_sorte) {
+        bigger.style.display='block'
+        equal.style.display='none'
+        smaller.style.display='none'
+        audio.pause('cyberpunk-2077-never-fade-away-by-samurai-refused.mp3')
+
+     } else  {
+        bigger.style.display='none'
         equal.style.display='block' 
         smaller.style.display='none'
         audio.play
     }
-        
+  }     
    </script>
 
- <br>
- <a href="../index.html"> 
+   <style>
+    img{
+     width: 10em;
+     display: none;
+    }
+   </style>
+
+   <br>
+   <a href="../index.html"> 
     <button>
       Voltar para a pagina principal
     </button>
- </a>
-
-  </body>
+   </a>
+ </body>
 </html>
