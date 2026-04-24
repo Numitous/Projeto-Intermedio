@@ -18,29 +18,28 @@
     </div>
 
     <script>
-
+        let tentativa = document.getElementById("adivinha").value;
         let n_sorte = Math.round(Math.random() * 100)
         let resposta = document.getElementById('resposta')
         adivinha.value=''
         let bigger = document.getElementById('bigger')
         let equal = document.getElementById('equal')
         let smaller = document.getElementById('smaller')
-        let audio = new Audio ('cyberpunk-2077-never-fade-away-by-samurai-refused.mp3')
+        let audio = new Audio ('Congrats.wav')
         audio.loop = true
-    function validar() {
-    let tentativa = document.getElementById("adivinha").value;
-
-    if (tentativa == n_sorte) {
+   
+        function validar() {
+        if (tentativa > n_sorte) {
         bigger.style.display='none' 
         equal.style.display='none'
         smaller.style.display='block'
-        audio.pause('cyberpunk-2077-never-fade-away-by-samurai-refused.mp3')
+        audio.pause()
 
-      } else if (tentativa > n_sorte) {
+      } else if (tentativa < n_sorte) {
         bigger.style.display='block'
         equal.style.display='none'
         smaller.style.display='none'
-        audio.pause('cyberpunk-2077-never-fade-away-by-samurai-refused.mp3')
+        audio.pause()
 
      } else  {
         bigger.style.display='none'
