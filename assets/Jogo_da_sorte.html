@@ -25,7 +25,7 @@
        let n1
        let n2
        let n3
-       let audio = new Audio ("assets/Jogo_da_sorte.html")
+       let audio = new Audio ("assets/Congrats.mp3")
   n1 = Math.round(Math.random()*9)
   n2 = Math.round(Math.random()*9)
   n3 = Math.round(Math.random()*9)
@@ -36,7 +36,7 @@
   if(timeout < 500) {
     myTimer = setTimeout(tryluck, timeout)
   }else{
-    stop()
+    audio.play()
   }
 }
        
