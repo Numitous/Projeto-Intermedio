@@ -20,26 +20,25 @@
        const dn1 = document.getElementById('dn1')
        const dn2 = document.getElementById('dn2')
        const dn3 = document.getElementById('dn3')
+       let tryluck()
        let myTimer
        let timeout = 0
        let n1
        let n2
        let n3
-       let audio = new Audio ("assets/Congrats.mp3")
-  n1 = Math.round(Math.random()*9)
-  n2 = Math.round(Math.random()*9)
-  n3 = Math.round(Math.random()*9)
-  dn1.innerHTML = n1
-  dn2.innerHTML = n2
-  dn3.innerHTML = n3
-  timeout = timeout + 25
-  if(timeout < 500) {
-    myTimer = setTimeout(tryluck, timeout)
-  }else{
-    audio.play()
-  }
-}
-       
+       let audio = new Audio ("/assets/Congrats.mp3")
+       n1 = Math.round(Math.random()*9)
+       n2 = Math.round(Math.random()*9)
+       n3 = Math.round(Math.random()*9)
+       dn1.innerHTML = n1
+       dn2.innerHTML = n2
+       dn3.innerHTML = n3
+       timeout = timeout + 25
+       if(timeout < 500) {
+        myTimer = setTimeout(tryluck, timeout)
+      }else{
+      audio.play()
+    }     
     function stop() {
       clearTimeout(myTimer)
       timeout = 0
