@@ -4,24 +4,24 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
 }
 
 div.conteudo {
     padding: 0 5em;
 }
 
-div.links {
-    text-align: center;
+div.menu {
+    text-align: left;
 }
 
-div.links a {
-    width: 32%;
+div.menu a {
+    width: 20%;
     display: inline-block;
 }
 
-div.links button{
-    width: 35%;
+div.menu button{
+    width: 27%;
     display: inline-block;
 }
 
@@ -34,3 +34,11 @@ div.Games a{
     display: inline-block;
 }
 
+.container {
+    display: grid();
+    grid-template-columns: 15em auto;
+}
+ 
+.menu{
+    
+}
