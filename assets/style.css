@@ -7,21 +7,18 @@ h1 {
     text-align: left;
 }
 
-div.conteudo {
+div.container {
     padding: 0 5em;
 }
 
 div.menu {
-    text-align: left;
-}
-
-div.menu a {
-    width: 20%;
+    background-color: red;
     display: inline-block;
+    text-align: left;
+    width: 20%;
 }
 
-div.menu button{
-    width: 27%;
+div.menu button{    
     display: inline-block;
 }
 
@@ -39,6 +36,8 @@ div.Games a{
     grid-template-columns: 15em auto;
 }
  
-.menu{
-    
+div.main {
+    background-color: white;
+    display: inline-block;
+    width: 75%;
 }
