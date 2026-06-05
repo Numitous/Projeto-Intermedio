@@ -41,3 +41,7 @@ div.main {
     display: inline-block;
     width: 85%;
 }
+
+div Home {
+    background-color: blue;
+}
