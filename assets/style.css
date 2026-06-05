@@ -1,47 +1,22 @@
 body {
     background-color: rgb(0, 0, 0);
-    text-align: justify;
+    color: white;
+    margin: 0;
 }
 
-h1 {
-    text-align: left;
+iframe {
+    border: 0;
+    height: 100vh;
+    padding-left: 1em;
+}
+iframe.main {
+    border-left: 1px solid white;
 }
 
 div.container {
-    padding: 0.5em;
+    display: grid;
+    grid-template-columns: 10em auto;
+    margin: 0;
+    height: 100vh;
 }
 
-div.menu {
-    background-color: rgb(167, 87, 87);
-    display: inline-block;
-    text-align: left;
-    width: 10%;
-}
-
-div.menu button{    
-    display: inline-block;
-}
-
-div.Games {
-    align-self: center;
-}
-
-div.Games a{
-    width: 32%;
-    display: inline-block;
-}
-
-.container {
-    display: grid();
-    grid-template-columns: 15em auto;
-}
- 
-div.main {
-    background-color: white;
-    display: inline-block;
-    width: 85%;
-}
-
-div Home {
-    background-color: blue;
-}
