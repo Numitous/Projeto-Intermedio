@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(0, 255, 255);
+    color: black;
     margin: 0;
 }
 
@@ -10,7 +10,7 @@ iframe {
     padding-left: 1em;
 }
 iframe.main {
-    border-left: 1px solid white;
+    border-left: 1px solid black;
 }
 
 div.container {
@@ -19,4 +19,3 @@ div.container {
     margin: 0;
     height: 100vh;
 }
-
